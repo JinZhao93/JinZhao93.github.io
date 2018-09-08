@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://duzhao.info/"/>
-  <updated>2018-03-27T15:13:39.267Z</updated>
+  <updated>2018-09-08T09:34:52.447Z</updated>
   <id>http://duzhao.info/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Effective java 学习笔记</title>
+    <link href="http://duzhao.info/2018/09/08/Effective-java-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://duzhao.info/2018/09/08/Effective-java-学习笔记/</id>
+    <published>2018-09-08T07:32:20.000Z</published>
+    <updated>2018-09-08T09:34:52.447Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="创建和销毁对象"><a href="#创建和销毁对象" class="headerlink" title="创建和销毁对象"></a>创建和销毁对象</h4><h5 id="用静态工厂方法代替构造器"><a href="#用静态工厂方法代替构造器" class="headerlink" title="用静态工厂方法代替构造器"></a>用静态工厂方法代替构造器</h5><p>如：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title">valueOf</span><span class="params">(<span class="keyword">boolean</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b ? Boolean.TURE : Boolean.FALSE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>相比较构造方法创建对象的优势：</p><ol><li><p>静态工厂方法有名称，更易于阅读</p></li><li><p>不必在每次调用该对象的时候都创建一个新的对象，有助于创建<strong>实例受控的类</strong>。</p></li><li><p>利于隐藏实现类；返回不可实例化、非公有的类；并且可以根据静态工厂方法的参数值或其他变量，调整返回声明(接口/抽象类)的子类型，这样有利于提升可维护性和性能，支持根据不同的发行版本返回不同类的需求。</p></li><li><p>在创建参数化类型实例的时候，使代码变得更加简洁。在1.6版本前创建参数化类型实例的时候，提供两次类型参数，如</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;String,String&gt;();</span><br></pre></td></tr></table></figure><p>利用静态工厂方法可以简化为</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;K,V&gt; <span class="function">HashMap&lt;K,V&gt; <span class="title">newInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> HashMap&lt;K,V&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>不过1.7版本之后创建参数化实例类型已经可以简化为</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br></pre></td></tr></table></figure></li></ol><p>静态工厂方法的缺点：</p><ol><li>类如果不含有公有的或者受保护的构造器，就不能被子类化。但是问题不大，这样可以鼓励开发人员尽量使用复合或者说接口而不是继承。</li><li>静态工厂方法与其他的静态方法没有实际上的区别。在Javadoc生成的API文档中不像构造方法一样，它不会被明确标识出来，对于查询阅读一个类的实例创建是比较困难的。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      Effective java 学习笔记
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://duzhao.info/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="java" scheme="http://duzhao.info/tags/java/"/>
+    
+      <category term="effective" scheme="http://duzhao.info/tags/effective/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杭程</title>
+    <link href="http://duzhao.info/2018/05/06/%E6%9D%AD%E7%A8%8B/"/>
+    <id>http://duzhao.info/2018/05/06/杭程/</id>
+    <published>2018-05-06T04:53:17.000Z</published>
+    <updated>2018-09-08T07:29:08.738Z</updated>
+    
+    <content type="html"><![CDATA[<link href="/style.css" rel="stylesheet" type="text/css"><script src="/crypto-js.js"></script><script src="/mcommon.js"></script><script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script> <div id="security"> <div> <div class="input-container"> <input type="password" class="form-control" id="pass" placeholder=" enter password to read. "/> <label for="pass"> enter password to read. </label> <div class="bottom-line"></div> </div> </div> </div> <div id="encrypt-blog" style="display:none"> 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 </div>]]></content>
+    
+    <summary type="html">
+    
+      Welcome to my blog, enter password to read.
+    
+    </summary>
+    
+      <category term="前篇" scheme="http://duzhao.info/categories/%E5%89%8D%E7%AF%87/"/>
+    
+    
+      <category term="杭州" scheme="http://duzhao.info/tags/%E6%9D%AD%E5%B7%9E/"/>
+    
+  </entry>
   
   <entry>
     <title>张潇雨的商业经典案例-总结1</title>

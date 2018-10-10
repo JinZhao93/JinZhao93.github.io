@@ -14,25 +14,27 @@
     
     
     
-    <title>1.用静态工厂方法代替构造器 | z°的博客</title>
+    <title>数据库unique创建失败 | z°的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="java,创建和销毁对象">
-    <meta name="description" content="Effective java 学习笔记">
-<meta name="keywords" content="java,创建和销毁对象">
+    <meta name="keywords" content="orm,mysql">
+    <meta name="description" content="问题今天通过jpa语句自动建表的时候发现唯一约束没有建上去，起初以为是orm映射写法上有问题，但是检查过后发现并没有问题。 12@Column(name = &quot;item_id&quot;, nullable = false, unique = true, columnDefinition = &quot;varchar(255) COMMENT &apos;对象爬取唯一标识&apos;&quot;)private String itemId; 在">
+<meta name="keywords" content="orm,mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1.用静态工厂方法代替构造器">
-<meta property="og:url" content="http://duzhao.info/2018/09/08/Effective-java-学习笔记/index.html">
+<meta property="og:title" content="数据库unique创建失败">
+<meta property="og:url" content="http://duzhao.info/2018/10/10/数据库unique创建失败/index.html">
 <meta property="og:site_name" content="z°的博客">
-<meta property="og:description" content="Effective java 学习笔记">
+<meta property="og:description" content="问题今天通过jpa语句自动建表的时候发现唯一约束没有建上去，起初以为是orm映射写法上有问题，但是检查过后发现并没有问题。 12@Column(name = &quot;item_id&quot;, nullable = false, unique = true, columnDefinition = &quot;varchar(255) COMMENT &apos;对象爬取唯一标识&apos;&quot;)private String itemId; 在">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-08T09:40:06.404Z">
+<meta property="og:image" content="http://img.duzhao.info/image/%E5%85%B6%E4%BB%96/WX20181010-154638@2x.png">
+<meta property="og:updated_time" content="2018-10-10T08:29:30.066Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1.用静态工厂方法代替构造器">
-<meta name="twitter:description" content="Effective java 学习笔记">
+<meta name="twitter:title" content="数据库unique创建失败">
+<meta name="twitter:description" content="问题今天通过jpa语句自动建表的时候发现唯一约束没有建上去，起初以为是orm映射写法上有问题，但是检查过后发现并没有问题。 12@Column(name = &quot;item_id&quot;, nullable = false, unique = true, columnDefinition = &quot;varchar(255) COMMENT &apos;对象爬取唯一标识&apos;&quot;)private String itemId; 在">
+<meta name="twitter:image" content="http://img.duzhao.info/image/%E5%85%B6%E4%BB%96/WX20181010-154638@2x.png">
     
         <link rel="alternate" type="application/atom+xml" title="z°的博客" href="/atom.xml">
     
@@ -120,7 +122,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">1.用静态工厂方法代替构造器</div>
+        <div class="flex-col header-title ellipsis">数据库unique创建失败</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -142,15 +144,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">1.用静态工厂方法代替构造器</h1>
+        <h1 class="title">数据库unique创建失败</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-09-08T07:32:20.000Z" itemprop="datePublished" class="page-time">
-  2018-09-08
+                <time datetime="2018-10-10T07:27:41.000Z" itemprop="datePublished" class="page-time">
+  2018-10-10
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Effective-java-学习笔记/">Effective-java-学习笔记</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/踩过的坑/">踩过的坑</a></li></ul>
 
             
         </h5>
@@ -168,22 +170,22 @@
         <nav class="post-toc-wrap" post-toc-shrink id="post-toc">
             <h4>TOC</h4>
                 
-                    <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#相比较构造方法创建对象的优势："><span class="post-toc-number">1.</span> <span class="post-toc-text">相比较构造方法创建对象的优势：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#静态工厂方法的缺点："><span class="post-toc-number">2.</span> <span class="post-toc-text">静态工厂方法的缺点：</span></a></li></ol>
+                    <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">问题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#原因"><span class="post-toc-number">2.</span> <span class="post-toc-text">原因</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#解决"><span class="post-toc-number">3.</span> <span class="post-toc-text">解决</span></a></li></ol>
                 
         </nav>
     </aside>
     
 
-<article id="post-Effective-java-学习笔记"
+<article id="post-数据库unique创建失败"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">1.用静态工厂方法代替构造器</h1>
+        <h1 class="post-card-title">数据库unique创建失败</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-09-08 15:32:20" datetime="2018-09-08T07:32:20.000Z"  itemprop="datePublished">2018-09-08</time>
+            <time class="post-time" title="2018-10-10 15:27:41" datetime="2018-10-10T07:27:41.000Z"  itemprop="datePublished">2018-10-10</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Effective-java-学习笔记/">Effective-java-学习笔记</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/踩过的坑/">踩过的坑</a></li></ul>
 
 
 
@@ -195,27 +197,31 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h5 id="相比较构造方法创建对象的优势："><a href="#相比较构造方法创建对象的优势：" class="headerlink" title="相比较构造方法创建对象的优势："></a>相比较构造方法创建对象的优势：</h5><p>如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title">valueOf</span><span class="params">(<span class="keyword">boolean</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b ? Boolean.TURE : Boolean.FALSE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>静态工厂方法有名称，更易于阅读</p>
-</li>
-<li><p>不必在每次调用该对象的时候都创建一个新的对象，有助于创建<strong>实例受控的类</strong>。</p>
-</li>
-<li><p>利于隐藏实现类；返回不可实例化、非公有的类；并且可以根据静态工厂方法的参数值或其他变量，调整返回声明(接口/抽象类)的子类型，这样有利于提升可维护性和性能，支持根据不同的发行版本返回不同类的需求。</p>
-</li>
-<li><p>在创建参数化类型实例的时候，使代码变得更加简洁。在1.6版本前创建参数化类型实例的时候，提供两次类型参数，如</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;String,String&gt;();</span><br></pre></td></tr></table></figure>
-<p>利用静态工厂方法可以简化为</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;K,V&gt; <span class="function">HashMap&lt;K,V&gt; <span class="title">newInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> HashMap&lt;K,V&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>不过1.7版本之后创建参数化实例类型已经可以简化为</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h5 id="静态工厂方法的缺点："><a href="#静态工厂方法的缺点：" class="headerlink" title="静态工厂方法的缺点："></a>静态工厂方法的缺点：</h5><ol>
-<li>类如果不含有公有的或者受保护的构造器，就不能被子类化。但是问题不大，这样可以鼓励开发人员尽量使用复合或者说接口而不是继承。</li>
-<li>静态工厂方法与其他的静态方法没有实际上的区别。在Javadoc生成的API文档中不像构造方法一样，它不会被明确标识出来，对于查询阅读一个类的实例创建是比较困难的。</li>
-</ol>
+            <h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><p>今天通过jpa语句自动建表的时候发现唯一约束没有建上去，起初以为是orm映射写法上有问题，但是检查过后发现并没有问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Column</span>(name = <span class="string">"item_id"</span>, nullable = <span class="keyword">false</span>, unique = <span class="keyword">true</span>, columnDefinition = <span class="string">"varchar(255) COMMENT '对象爬取唯一标识'"</span>)</span><br><span class="line"><span class="keyword">private</span> String itemId;</span><br></pre></td></tr></table></figure>
+<p>在对mysql数据库已创建好的字段上添加唯一约束时出现<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.duzhao.info/image/%E5%85%B6%E4%BB%96/WX20181010-154638@2x.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<h5 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h5><p>so 是字段长度定义超出限制，由于我的数据库编码是utf8mb4,一个字符占4个字节，所以unique单字段最大定义长度为191，如果是编码是utf8，一个字符长度为3个字节，那么最大定义长度为255。查询发现InnoDB有单个索引最大字节数 768 的限制，那么这个768应该就是按照一个字符3个字节的最大长度计算的。之所以varchat一直以一来推荐最大长度为255，索引长度限制就是原因之一。留下了没有知识的眼泪。。。</p>
+<h5 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h5><p>所以在数据库改为utf8mb4后，如果像对单字段建索引，那么长度需要控制在191之内。</p>
+<p>知识补充</p>
+<blockquote>
+<p>字段的限制在字段定义的时候有以下规则： </p>
+<p>a)    存储限制       varchar 字段是将实际内容单独存储在聚簇索引之外，内容开头用1到2个字节表示实际长度（长度超过255时需要2个字节），因此最大长度不能超过65535。 </p>
+<p>b)    编码长度限制</p>
+<pre><code>字符类型若为gbk，每个字符最多占2个字节，最大长度不能超过32766;
+</code></pre><p>　 字符类型若为utf8，每个字符最多占3个字节，最大长度不能超过21845。</p>
+<p>　 对于英文比较多的论坛 ，使用GBK则每个字符占用2个字节，而使用UTF－8英文却只占一个字节。</p>
+<p>　 若定义的时候超过上述限制，则varchar字段会被强行转为text类型，并产生warning。 </p>
+<p>c)    行长度限制</p>
+<p>　　导致实际应用中varchar长度限制的是一个行定义的长度。 MySQL要求一个行的定义长度不能超过65535。若定义的表长度超过这个值，则提示</p>
+<p>　　ERROR 1118 (42000): Row size too large. The maximum row size for the used table type, not counting BLOBs, is 65535. You have to 　　　change some columns to TEXT or BLOBs。</p>
+<p>转自<a href="https://blog.csdn.net/alaahong/article/details/9621339" target="_blank" rel="noopener">https://blog.csdn.net/alaahong/article/details/9621339</a></p>
+</blockquote>
 
         </div>
 
@@ -224,12 +230,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-09-08T09:40:06.404Z" itemprop="dateUpdated">2018-09-08 17:40:06</time>
+    最后更新时间：<time datetime="2018-10-10T08:29:30.066Z" itemprop="dateUpdated">2018-10-10 16:29:30</time>
 </span><br>
 
 
         
-        <a href="/2018/09/08/Effective-java-学习笔记/" target="_blank" rel="external">http://duzhao.info/2018/09/08/Effective-java-学习笔记/</a>
+        <a href="/2018/10/10/数据库unique创建失败/" target="_blank" rel="external">http://duzhao.info/2018/10/10/数据库unique创建失败/</a>
         
     </div>
     
@@ -250,7 +256,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/创建和销毁对象/">创建和销毁对象</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/orm/">orm</a></li></ul>
 
 
             
@@ -260,7 +266,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://duzhao.info/2018/09/08/Effective-java-学习笔记/&title=《1.用静态工厂方法代替构造器》 — z°的博客&pic=http://duzhao.info/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://duzhao.info/2018/10/10/数据库unique创建失败/&title=《数据库unique创建失败》 — z°的博客&pic=http://duzhao.info/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -270,22 +276,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://duzhao.info/2018/09/08/Effective-java-学习笔记/&title=《1.用静态工厂方法代替构造器》 — z°的博客&source=z°的博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://duzhao.info/2018/10/10/数据库unique创建失败/&title=《数据库unique创建失败》 — z°的博客&source=z°的博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://duzhao.info/2018/09/08/Effective-java-学习笔记/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://duzhao.info/2018/10/10/数据库unique创建失败/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《1.用静态工厂方法代替构造器》 — z°的博客&url=http://duzhao.info/2018/09/08/Effective-java-学习笔记/&via=http://duzhao.info" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据库unique创建失败》 — z°的博客&url=http://duzhao.info/2018/10/10/数据库unique创建失败/&via=http://duzhao.info" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://duzhao.info/2018/09/08/Effective-java-学习笔记/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://duzhao.info/2018/10/10/数据库unique创建失败/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -305,21 +311,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/10/10/数据库unique创建失败/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">数据库unique创建失败</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/05/06/杭程/" id="post-next" class="post-nav-link">
+      <a href="/2018/09/08/Effective-java-学习笔记/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">杭程</h4>
+        <h4 class="title">1.用静态工厂方法代替构造器</h4>
       </a>
     </div>
   
@@ -442,7 +441,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://duzhao.info/2018/09/08/Effective-java-学习笔记/&title=《1.用静态工厂方法代替构造器》 — z°的博客&pic=http://duzhao.info/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://duzhao.info/2018/10/10/数据库unique创建失败/&title=《数据库unique创建失败》 — z°的博客&pic=http://duzhao.info/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -452,22 +451,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://duzhao.info/2018/09/08/Effective-java-学习笔记/&title=《1.用静态工厂方法代替构造器》 — z°的博客&source=z°的博客" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://duzhao.info/2018/10/10/数据库unique创建失败/&title=《数据库unique创建失败》 — z°的博客&source=z°的博客" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://duzhao.info/2018/09/08/Effective-java-学习笔记/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://duzhao.info/2018/10/10/数据库unique创建失败/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《1.用静态工厂方法代替构造器》 — z°的博客&url=http://duzhao.info/2018/09/08/Effective-java-学习笔记/&via=http://duzhao.info" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据库unique创建失败》 — z°的博客&url=http://duzhao.info/2018/10/10/数据库unique创建失败/&via=http://duzhao.info" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://duzhao.info/2018/09/08/Effective-java-学习笔记/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://duzhao.info/2018/10/10/数据库unique创建失败/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -478,7 +477,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOElEQVR42u3a0Y7DIAxE0f7/T6evWyUhM2NaLebmqYoo5aSSg7FfL/k6/lx3d873z+PHY84jJ18wYMBYlnEMrzFj/MPKzApemQEGDBg7MO4WcTdGIenLVR7Ww5phwIABw9zkZZtCN5TDgAEDRjadjlSSWBgwYMBwk9jxQdv4HEx5TD/KxWHAgLEgw13KLz9/pb4BAwaMpRiHeembQjdl1YPsxZwwYMBozdADXJaO1gO33vwBAwaMrgw3sLrlyUrZYJwwX/wPMGDAaMrIFuoe0rltYXrjxe17AwYMGO0Y7pG9sgilJKCHb73YAAMGjH6M7Gd0pHuI5gI+klgYMGA0ZcxNKd3So74dDN8SMGDAaMHImq7qxcvwQO1uJTBgwGjNyBJOF+Zu+yppMwwYMPZh1AOlm4LOajKDAQNGb4YS+NwQqX9LCfphfQMGDBiLM7JjMumYvjBG/+5FLg4DBozWjKzEqNzPHoHdbAEDBoymDPfY3W2eqGwN9UQaBgwYOzCygFtPSt1mi4eZYcCAsQ3DDa9ZOqqEVz0ow4ABYzeGMrUCc0e6FQzpvQEDBox2jLkH93oS6x6fGQ1hMGDAaMGoFAb0NNgFT9gUwoABoxHDbaqoTO0exhnNFjBgwNiAUQ+y2dMap6/2/DBgwNiA4bZthRlzef6HfS4MGDBgFAqQetmgtHuFAQMGDDMIKpu/SiFh8nsDBgwY/57htkRki9OLCpMLmTBgwFicUdl3ZWOU8Dq3RQMGDBjLMt6I+GqY46a9BQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3a3W6DMAwG0L7/SzNptxXlc5xOwxyuKtSFnE4y8c/rFV/H73X2+ezO+/V5tbM72y4MDIzbMqoPTpDvKySAZLWzlTEwMJ7A6GyuA+hTMTAwMFpLF6kYGBgYuwLu2Z2z7eYwDAwMjM+MJInt3P98ZEzKedtycQwMjBsy+o2B733+0/4GBgbGv2QcxWstRCZPbO0KAwNjNKM67pA8MqHmsEIzFQMDYyhjrZRf3VBeUMuLehehFgMDYxyj+mfVza2F4EI6jYGBMZrROeTlD0swu0bKMDAwpjKqhfhqI3NXE/SinIeBgTGUkZfm15LeaiNhcR0MDIzHMNa2mwytrhXgCg0DDAyM0Yy1xDJvD+Qt0moIxsDAeCYjD53VYn2nJZAfWzEwMGYz+iNf1UDcaVJerICBgTGUkTygWizrb6s6zIGBgfEcRt56XDvMlWdAqm8MDAyMoYx8uWihYmuzU7C7SGIxMDBGM3Y1DPoDFotvDwwMjEGMzkhWJ+GshuyoGYCBgTGa0T+o5fgkWFcbqBgYGLMZydLV4+NagN789sDAwBjEOIpXNT9ONlod/Ir+DxgYGIMY1WCXfydvTO4d7MDAwJjKSIJsNRFNANVR1/J0GwYGxjhGEvjy1DT/UbYFfQwMDIxiqrk3oBcycgwMDIy4cN8J6Gs/BAYGxhMY+XBq5/CXtxy+mItjYGDckLFWrN+1ibUD6GKvAwMD436MH45dslBiUCvIAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 

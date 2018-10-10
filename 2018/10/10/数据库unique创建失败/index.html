@@ -30,7 +30,7 @@
 <meta property="og:description" content="问题今天通过jpa语句自动建表的时候发现唯一约束没有建上去，起初以为是orm映射写法上有问题，但是检查过后发现并没有问题。 12@Column(name = &quot;item_id&quot;, nullable = false, unique = true, columnDefinition = &quot;varchar(255) COMMENT &apos;对象爬取唯一标识&apos;&quot;)private String itemId; 在">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://img.duzhao.info/image/%E5%85%B6%E4%BB%96/WX20181010-154638@2x.png">
-<meta property="og:updated_time" content="2018-10-10T08:29:30.066Z">
+<meta property="og:updated_time" content="2018-10-10T08:33:14.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库unique创建失败">
 <meta name="twitter:description" content="问题今天通过jpa语句自动建表的时候发现唯一约束没有建上去，起初以为是orm映射写法上有问题，但是检查过后发现并没有问题。 12@Column(name = &quot;item_id&quot;, nullable = false, unique = true, columnDefinition = &quot;varchar(255) COMMENT &apos;对象爬取唯一标识&apos;&quot;)private String itemId; 在">
@@ -170,7 +170,7 @@
         <nav class="post-toc-wrap" post-toc-shrink id="post-toc">
             <h4>TOC</h4>
                 
-                    <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">问题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#原因"><span class="post-toc-number">2.</span> <span class="post-toc-text">原因</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#解决"><span class="post-toc-number">3.</span> <span class="post-toc-text">解决</span></a></li></ol>
+                    <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">问题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#原因"><span class="post-toc-number">2.</span> <span class="post-toc-text">原因</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#解决"><span class="post-toc-number">3.</span> <span class="post-toc-text">解决</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#知识补充"><span class="post-toc-number">4.</span> <span class="post-toc-text">知识补充</span></a></li></ol>
                 
         </nav>
     </aside>
@@ -207,9 +207,8 @@
                 <div class="image-caption"></div>
             </figure></p>
 <h5 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h5><p>so 是字段长度定义超出限制，由于我的数据库编码是utf8mb4,一个字符占4个字节，所以unique单字段最大定义长度为191，如果是编码是utf8，一个字符长度为3个字节，那么最大定义长度为255。查询发现InnoDB有单个索引最大字节数 768 的限制，那么这个768应该就是按照一个字符3个字节的最大长度计算的。之所以varchat一直以一来推荐最大长度为255，索引长度限制就是原因之一。留下了没有知识的眼泪。。。</p>
-<h5 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h5><p>所以在数据库改为utf8mb4后，如果像对单字段建索引，那么长度需要控制在191之内。</p>
-<p>知识补充</p>
-<blockquote>
+<h5 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h5><p>所以在数据库改为utf8mb4后，如果想对单字段建索引，那么长度需要控制在191之内。</p>
+<h5 id="知识补充"><a href="#知识补充" class="headerlink" title="知识补充"></a>知识补充</h5><blockquote>
 <p>字段的限制在字段定义的时候有以下规则： </p>
 <p>a)    存储限制       varchar 字段是将实际内容单独存储在聚簇索引之外，内容开头用1到2个字节表示实际长度（长度超过255时需要2个字节），因此最大长度不能超过65535。 </p>
 <p>b)    编码长度限制</p>
@@ -230,7 +229,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-10-10T08:29:30.066Z" itemprop="dateUpdated">2018-10-10 16:29:30</time>
+    最后更新时间：<time datetime="2018-10-10T08:33:14.533Z" itemprop="dateUpdated">2018-10-10 16:33:14</time>
 </span><br>
 
 

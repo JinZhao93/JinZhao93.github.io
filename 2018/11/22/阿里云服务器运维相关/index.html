@@ -29,7 +29,7 @@
 <meta property="og:site_name" content="z°的博客">
 <meta property="og:description" content="twitter爬虫内容抽取规则">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-22T06:24:42.581Z">
+<meta property="og:updated_time" content="2018-11-22T06:29:11.800Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里云服务器运维相关">
 <meta name="twitter:description" content="twitter爬虫内容抽取规则">
@@ -166,7 +166,7 @@
         <nav class="post-toc-wrap" post-toc-shrink id="post-toc">
             <h4>TOC</h4>
                 
-                    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#迁移"><span class="post-toc-number">1.</span> <span class="post-toc-text">迁移</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#步骤"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">步骤</span></a></li></ol></li></ol>
+                    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#迁移"><span class="post-toc-number">1.</span> <span class="post-toc-text">迁移</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#需求"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">需求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#步骤"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">步骤</span></a></li></ol></li></ol>
                 
         </nav>
     </aside>
@@ -191,14 +191,14 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h3><pre><code>#### 需求
-</code></pre><p>将老服务器环境跨账户迁移到新购服务器。</p>
+            <h3 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h3><h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><p>将老服务器环境跨账户迁移到新购服务器。</p>
 <h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><pre><code>1. 基于实例创建快照
 2. 基于快照创建镜像
 3. 将镜像复制到新服务所在地域，否则看不到共享镜像
 4. 共享服务器到新账户,在新账户同地域共享中查看
 5. 新购服务器关机，点击更新系统盘，更换共享服务器
-6. 修改安全组，查看是否限制外网访问，如果限制添加访问规则，某些新购服务器，如突发性服务器默认不添加外网访问规则。
+6. 修改安全组，查看是否限制外网访问，如果限制添加访问规则，某些新购服务器，
+   如突发性服务器默认不添加外网访问规则。
 7. 重启服务器，启动服务器上相关环境，如nginx
 8. 域名重新指向新服务器公网地址 等待生效
 9. 完成
@@ -211,7 +211,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-11-22T06:24:42.581Z" itemprop="dateUpdated">2018-11-22 14:24:42</time>
+    最后更新时间：<time datetime="2018-11-22T06:29:11.800Z" itemprop="dateUpdated">2018-11-22 14:29:11</time>
 </span><br>
 
 

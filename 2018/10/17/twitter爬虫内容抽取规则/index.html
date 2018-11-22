@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>twitter爬虫内容抽取规则 | z°的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="java,webmagic,XPath,twitter爬取">
+    <meta name="description" content="twitter爬虫内容抽取规则">
+<meta name="keywords" content="java,webmagic,XPath,twitter爬取">
+<meta property="og:type" content="article">
+<meta property="og:title" content="twitter爬虫内容抽取规则">
+<meta property="og:url" content="http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/index.html">
+<meta property="og:site_name" content="z°的博客">
+<meta property="og:description" content="twitter爬虫内容抽取规则">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://img.duzhao.info/image/%E5%85%B6%E4%BB%96/WX20181017-162525.png">
+<meta property="og:image" content="http://img.duzhao.info/image/%E5%85%B6%E4%BB%96/WX20181017-183815.png">
+<meta property="og:updated_time" content="2018-10-21T12:13:00.909Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="twitter爬虫内容抽取规则">
+<meta name="twitter:description" content="twitter爬虫内容抽取规则">
+<meta name="twitter:image" content="http://img.duzhao.info/image/%E5%85%B6%E4%BB%96/WX20181017-162525.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="z°的博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="//js.duzhao.info/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/about" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">z°</h5>
+          <a href="mailto:duzhaowork@163.com" title="duzhaowork@163.com" class="mail">duzhaowork@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user-circle"></i>
+                关于
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/JinZhao93" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">twitter爬虫内容抽取规则</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">twitter爬虫内容抽取规则</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-10-17T07:35:20.000Z" itemprop="datePublished" class="page-time">
+  2018-10-17
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/爬虫/">爬虫</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside id="toc-div" class="post-widget" >
+        <nav class="post-toc-wrap" post-toc-shrink id="post-toc">
+            <h4>TOC</h4>
+                
+                    <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#背景"><span class="post-toc-number">1.</span> <span class="post-toc-text">背景</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#前期准备"><span class="post-toc-number">2.</span> <span class="post-toc-text">前期准备</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内容抽取"><span class="post-toc-number">3.</span> <span class="post-toc-text">内容抽取</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#用户基础信息抽取"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">用户基础信息抽取</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#目标地址爬取"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">目标地址爬取</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#推特详情内容抽取"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">推特详情内容抽取</span></a></li></ol></li></ol>
+                
+        </nav>
+    </aside>
+    
+
+<article id="post-twitter爬虫内容抽取规则"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">twitter爬虫内容抽取规则</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-10-17 15:35:20" datetime="2018-10-17T07:35:20.000Z"  itemprop="datePublished">2018-10-17</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/爬虫/">爬虫</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>​    工作需要，目标是将twitter用户发布内容爬取下来。在完成稳定内容获取之后，另外一个重点工作之一就是抽取获取的内容存储。由于获取到的html内容比较复杂，所以需要一些规则来抽取其中所需要的内容，当然内容抽取有许多方式，比如正则表达式，css选择器等，这里主要使用XPath来抽取页面内容。</p>
+<h4 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h4><p>爬虫框架:  <a href="http://webmagic.io/docs/zh/" target="_blank" rel="noopener">webmagic</a><br>爬取工具: <a href="http://npm.taobao.org/mirrors/selenium" target="_blank" rel="noopener">Selenium</a>    <a href="https://developers.google.com/web/updates/2017/04/headless-chrome" target="_blank" rel="noopener">headless-chorme</a><br>XPath语法了解<br>正则表达式语法了解<br>科学上网</p>
+<h4 id="内容抽取"><a href="#内容抽取" class="headerlink" title="内容抽取"></a>内容抽取</h4><p>我们需要获取用户的基础信息，和用户发布的推特的详情页地址列表，然后到推特详情页去爬取每一条的具体内容。</p>
+<h5 id="用户基础信息抽取"><a href="#用户基础信息抽取" class="headerlink" title="用户基础信息抽取"></a>用户基础信息抽取</h5><p>首先需要获取原始爬取数据，由于twitter每个用户有个唯一账户标识，这个直接体现在域名上，所以也还算比较方便查找对应用户，以爬取川普twitter内容为例，川普的twitter内容页为<a href="https://mobile.twitter.com/realDonaldTrump" target="_blank" rel="noopener">https://mobile.twitter.com/realDonaldTrump</a> 这里选择的是mobile.twitter.com为基础域名，原因是由于提供给移动端的内容无关数据内容较少，网页大小比pc端较小，可以提升内容获取速度。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.duzhao.info/image/%E5%85%B6%E4%BB%96/WX20181017-162525.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>关于用户基础信息，在用浏览器检查后发现用户信息都在上图div中,在对此<a href="https://mobile.twitter.com/realDonaldTrump网页内容动态获取后，分析发现此div有class" target="_blank" rel="noopener">https://mobile.twitter.com/realDonaldTrump网页内容动态获取后，分析发现此div有class</a> =”rn-m611by rn-bnwqim”组合的唯一标识。</p>
+<p>于是可以通过class属性组合来抽取此div内容</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">page.getHtml().xpath(<span class="string">"//div[@class='rn-m611by' and @class='rn-bnwqim']"</span>)</span><br></pre></td></tr></table></figure>
+<p>目前我所需要的推特用户信息为，用户头像，用户昵称，用户描述，用户是否认证等信息。对应抽取规则如下</p>
+<p>用户头像:  抽取此div元素下第一个img元素的src属性内容</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xpath(<span class="string">"//div[@class='rn-m611by' and @class='rn-bnwqim']//img[1]/@src"</span>)</span><br></pre></td></tr></table></figure>
+<p>用户昵称：抽取此div元素下第2个div元素的包含span元素的第一个span元素的文本</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xpath(<span class="string">"//div[@class='rn-m611by' and @class='rn-bnwqim']/div[2]//span/span/text()"</span>)</span><br></pre></td></tr></table></figure>
+<p>用户描述：抽取此div元素下第3个div元素的包含span元素的文本</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xpath(<span class="string">"//div[@class='rn-m611by' and @class='rn-bnwqim']/div[3]//span/text()"</span>)</span><br></pre></td></tr></table></figure>
+<p>用户是否认证：抽取此div元素下第2个元素下是否存在svg元素</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xpath(<span class="string">"//div[@class='rn-m611by' and @class='rn-bnwqim']/div[2]//svg"</span>)</span><br></pre></td></tr></table></figure>
+<p>抽取结果如下</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">"avatar"</span>:<span class="string">"https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg"</span>,<span class="attr">"certificate"</span>:<span class="number">1</span>,<span class="attr">"description"</span>:<span class="string">"45th President of the United States of America"</span>,<span class="attr">"itemId"</span>:<span class="string">"realDonaldTrump"</span>,<span class="attr">"name"</span>:<span class="string">"Donald J. Trump"</span>&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="目标地址爬取"><a href="#目标地址爬取" class="headerlink" title="目标地址爬取"></a>目标地址爬取</h5><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.duzhao.info/image/%E5%85%B6%E4%BB%96/WX20181017-183815.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p>搜索发现每项列表都在对应的a便签中，所以通过webmagic作者封装的links()方法抽取出所有的链接，然后正则匹配出符合条件的链接。如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">page.getHtml().links().regex(<span class="string">".*/"</span> + itemId + <span class="string">"/status/\\w+"</span>).all()</span><br></pre></td></tr></table></figure>
+<p>然后目标地址就爬取到了，但是这里有个问题，由于推特客户端是上拉分页加载的，所以页面动态加载完后只能获取到部分链接。需要通过selenium操作浏览器上拉加载后获取更多内容，具体操作不在此描述。</p>
+<h5 id="推特详情内容抽取"><a href="#推特详情内容抽取" class="headerlink" title="推特详情内容抽取"></a>推特详情内容抽取</h5><p>问题1 转发关系</p>
+<p>问题2 唯一id</p>
+<p>问题3 推特投票类型过滤</p>
+<p>问题4 翻译按钮自动点击</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-10-21T12:13:00.909Z" itemprop="dateUpdated">2018-10-21 20:13:00</time>
+</span><br>
+
+
+        
+        <a href="/2018/10/17/twitter爬虫内容抽取规则/" target="_blank" rel="external">http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://duzhao.info">
+            <img src="/img/avatar.jpg" alt="z°">
+            z°
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XPath/">XPath</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/twitter爬取/">twitter爬取</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webmagic/">webmagic</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/&title=《twitter爬虫内容抽取规则》 — z°的博客&pic=http://duzhao.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/&title=《twitter爬虫内容抽取规则》 — z°的博客&source=z°的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《twitter爬虫内容抽取规则》 — z°的博客&url=http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/&via=http://duzhao.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/11/22/阿里云服务器运维相关/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">阿里云服务器运维相关</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/10/10/数据库unique创建失败/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">mysql数据库表字段unique创建失败</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "H4ndW1LFtl9oThWL4aAXYDoU-gzGzoHsz",
+            appKey: "Yff4AtvDT1C4hdtNDYEDmFRj",
+            avatar: "z°",
+            placeholder: "欢迎在此评论~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>z° &copy; 2018</span>
+            <span>
+                
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">浙ICP备18003953号</a><br>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/&title=《twitter爬虫内容抽取规则》 — z°的博客&pic=http://duzhao.info/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/&title=《twitter爬虫内容抽取规则》 — z°的博客&source=z°的博客" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《twitter爬虫内容抽取规则》 — z°的博客&url=http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/&via=http://duzhao.info" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://duzhao.info/2018/10/17/twitter爬虫内容抽取规则/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHUlEQVR42u3aQW4CMQwFUO5/abqtVEDf9hRpnJcVaplMHgvLjv14xOv5a737b/XZ3m6jhYGBcVvG8+P6u/WEVN0hORsGBsY5jHy7d09N8Plb3v4dAwMD49JAnIRUDAwMjB4jP3oSmqvvwsDAwEgC36TQTb7/pVocAwPjhoz81v37n/+lv4GBgXErxrO1Rglc8J3yeTAwMFYzJsXqJHTmSWShOYGBgbGUkbckq2G3epTP4GaoxcDAWMHI07VqiVsF5Jd9zcobAwPjtoxeczFH5mlfL2V8kRpiYGCsY0Q1bjGB6xXDVSoGBsY5jMl2eYPzquGJQi2OgYGxlFEtZZOUMQnTyRvLRSwGBsY6Ru/hXtsyBxfaEhgYGKsZeZDtHXSy2yhhxcDAWMSovnLya5WHveJgjYGBcQJjMkLRG7ZIQvNo2AIDA2Mdo1fKJiEygU2GLTAwME5gVK/pr2pzVkfK8qIXAwNjH2OelvV2uDhBxMDAWM2YXLpVw26vSVAYHcPAwFjKyMNifpQk4Ztf1WFgYJzD6F2NJWGxF7jzsvbFsxgYGEsZz+KqJnx5+Zqng1F/AwMDYxGjd03fG7/I08080GNgYJzDSIJsbyyjt2fvB8LAwDiB0buyn5em8ws7DAwMjCSlyz8nx+0VtxgYGBh5MZkcvZogRtEVAwPjAEa14JykhuVBirwTi4GBsZRRLR0nDcj8Pv+yo2NgYNyb8QM+Go50K1TaawAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//js.duzhao.info/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//js.duzhao.info/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

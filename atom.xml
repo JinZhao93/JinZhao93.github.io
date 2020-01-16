@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://duzhao.info/"/>
-  <updated>2020-01-16T05:31:19.967Z</updated>
+  <updated>2020-01-16T05:33:21.234Z</updated>
   <id>http://duzhao.info/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://duzhao.info/2020/01/02/%E6%8A%80%E6%9C%AF%E6%A0%88%E6%95%B4%E7%90%86/"/>
     <id>http://duzhao.info/2020/01/02/技术栈整理/</id>
     <published>2020-01-02T09:32:33.000Z</published>
-    <updated>2020-01-16T05:31:19.967Z</updated>
+    <updated>2020-01-16T05:33:21.234Z</updated>
     
-    <content type="html"><![CDATA[<ul><li><h4 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h4><ul><li><h5 id="大前端"><a href="#大前端" class="headerlink" title="大前端"></a>大前端</h5><ul><li>web基础<ul><li>html<ul><li>html</li><li>html5</li></ul></li><li>css<ul><li>css3</li><li>sass  </li><li>less</li></ul></li><li>JavaScript<ul><li>ES6</li></ul></li></ul></li><li>vue.js</li><li>react.js</li><li>web pack</li></ul></li><li><h5 id="原生"><a href="#原生" class="headerlink" title="原生"></a>原生</h5><ul><li>android<ul><li>语法 <ul><li>java</li><li>kotlin</li></ul></li><li>基础</li><li>框架</li><li>常用三方库</li></ul></li></ul></li><li><p>小程序</p><ul><li>框架</li></ul></li><li>fluter</li></ul></li><li><h4 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h4><ul><li>java后端<ul><li>jvm</li><li>java1.8</li><li>Spring</li><li>持久层<ul><li>mybatis<ul><li><a href="&#39;https://mybatis.org/mybatis-3/zh/index.html&#39;">mybatis3介绍文档</a></li></ul></li></ul></li></ul></li><li>nodejs</li></ul></li><li><h4 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h4><ul><li>Linux</li><li>持续集成</li></ul></li><li><h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><ul><li>单元测试</li><li>测试用例</li><li>测试平台</li><li>自动测试</li></ul></li><li><h4 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h4></li><li><h4 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h4></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><h4 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h4><ul><li><h5 id="大前端"><a href="#大前端" class="headerlink" title="大前端"></a>大前端</h5><ul><li>web基础<ul><li>html<ul><li>html</li><li>html5</li></ul></li><li>css<ul><li>css3</li><li>sass  </li><li>less</li></ul></li><li>JavaScript<ul><li>ES6</li></ul></li></ul></li><li>vue.js</li><li>react.js</li><li>web pack</li></ul></li><li><h5 id="原生"><a href="#原生" class="headerlink" title="原生"></a>原生</h5><ul><li>android<ul><li>语法 <ul><li>java</li><li>kotlin</li></ul></li><li>基础</li><li>框架</li><li>常用三方库</li></ul></li></ul></li><li><p>小程序</p><ul><li>框架</li></ul></li><li>fluter</li></ul></li><li><h4 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h4><ul><li>java后端<ul><li>jvm</li><li>java1.8</li><li>Spring</li><li>持久层<ul><li>mybatis<ul><li><a href="https://mybatis.org/mybatis-3/zh/index.html" target="_blank" rel="noopener">mybatis3介绍文档</a></li></ul></li></ul></li></ul></li><li>nodejs</li></ul></li><li><h4 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h4><ul><li>Linux</li><li>持续集成</li></ul></li><li><h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><ul><li>单元测试</li><li>测试用例</li><li>测试平台</li><li>自动测试</li></ul></li><li><h4 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h4></li><li><h4 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h4></li></ul>]]></content>
     
     <summary type="html">
     

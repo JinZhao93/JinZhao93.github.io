@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://duzhao.info/"/>
-  <updated>2020-01-16T03:38:52.576Z</updated>
+  <updated>2020-01-16T03:41:33.920Z</updated>
   <id>http://duzhao.info/</id>
   
   <author>
@@ -21,26 +21,20 @@
     <link href="http://duzhao.info/2020/01/02/%E6%8A%80%E6%9C%AF%E6%A0%88%E6%95%B4%E7%90%86/"/>
     <id>http://duzhao.info/2020/01/02/技术栈整理/</id>
     <published>2020-01-02T09:32:33.000Z</published>
-    <updated>2020-01-16T03:38:52.576Z</updated>
+    <updated>2020-01-16T03:41:33.920Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>技术栈整理<ul><li>前端<ul><li>大前端<ul><li>web基础<ul><li>html<ul><li>html</li><li>html5</li></ul></li><li>css<ul><li>css3</li><li>sass  </li><li>less</li></ul></li><li>JavaScript<ul><li>ES6</li></ul></li></ul></li><li>vue.js</li><li>react.js</li><li>web pack</li></ul></li><li>原生<ul><li>android<ul><li>语法 <ul><li>java</li><li>kotlin</li></ul></li><li>基础</li><li>框架</li><li>常用三方库</li></ul></li></ul></li><li>小程序<ul><li>框架</li></ul></li><li>fluter</li></ul></li><li>后端<ul><li>java后端<ul><li>jvm</li><li>java1.8</li><li>Spring</li><li>持久层<ul><li>mybatis<ul><li><a href="&#39;https://mybatis.org/mybatis-3/zh/index.html&#39;">mybatis3介绍文档</a></li></ul></li></ul></li></ul></li><li>nodejs</li></ul></li><li>运维<ul><li>Linux</li><li>持续集成</li></ul></li><li>测试<ul><li>单元测试</li><li>测试用例</li><li>测试平台</li><li>自动测试</li></ul></li><li>数据结构与算法</li><li>设计模式</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><ul><li>前端<ul><li>大前端<ul><li>web基础<ul><li>html<ul><li>html</li><li>html5</li></ul></li><li>css<ul><li>css3</li><li>sass  </li><li>less</li></ul></li><li>JavaScript<ul><li>ES6</li></ul></li></ul></li><li>vue.js</li><li>react.js</li><li>web pack</li></ul></li><li>原生<ul><li>android<ul><li>语法 <ul><li>java</li><li>kotlin</li></ul></li><li>基础</li><li>框架</li><li>常用三方库</li></ul></li></ul></li><li>小程序<ul><li>框架</li></ul></li><li>fluter</li></ul></li><li>后端<ul><li>java后端<ul><li>jvm</li><li>java1.8</li><li>Spring</li><li>持久层<ul><li>mybatis<ul><li><a href="&#39;https://mybatis.org/mybatis-3/zh/index.html&#39;">mybatis3介绍文档</a></li></ul></li></ul></li></ul></li><li>nodejs</li></ul></li><li>运维<ul><li>Linux</li><li>持续集成</li></ul></li><li>测试<ul><li>单元测试</li><li>测试用例</li><li>测试平台</li><li>自动测试</li></ul></li><li>数据结构与算法</li><li>设计模式</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;ul&gt;
-&lt;li&gt;技术栈整理&lt;ul&gt;
+        &lt;h4 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;前端&lt;ul&gt;
 &lt;li&gt;大前端&lt;ul&gt;
 &lt;li&gt;web基础&lt;ul&gt;
 &lt;li&gt;html&lt;ul&gt;
 &lt;li&gt;html&lt;/li&gt;
-&lt;li&gt;html5&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;css&lt;ul&gt;
-&lt;li&gt;css3&lt;/li&gt;
 &lt;li&gt;
       
     
